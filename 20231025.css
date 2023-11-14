@@ -1,0 +1,445 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: 標楷體;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #fff;
+  box-shadow: 3px 3px 5px 1px #757474;
+}
+header div.logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 5;
+  flex-shrink: 1;
+  flex-basis: 400px;
+  margin-left: 2rem;
+}
+header div.logo img {
+  width: 6vw;
+  height: 6vw;
+}
+header div.logo h1 {
+  width: 30vw;
+}
+header nav {
+  flex: 2 1 400px;
+}
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+header nav ul li a {
+  color: #09777d;
+  text-decoration: none;
+  font-size: 1.35rem;
+}
+
+@media screen and (max-width: 550px) {
+  header div.logo {
+    margin-left: 0.5rem;
+  }
+  header div.logo img {
+    width: 15vw;
+    height: 15vw;
+  }
+}
+main section.backimg {
+  min-height: 90vh;
+  width: 100%;
+  background-image: url(/images/pexels-photo-416676.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+main section.backimg div.filter {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  min-height: 90vh;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+main section.backimg h3 {
+  font-size: 3.5rem;
+  color: white;
+  margin: 2rem 0rem;
+}
+main section.backimg button.start {
+  background-color: #3bf0e5;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+main section.second {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main section.second h2 {
+  font-size: 2rem;
+  margin: 2rem 0rem;
+}
+main section.second section.cards {
+  display: flex;
+  width: 80%;
+  min-height: 80vh;
+  flex-wrap: wrap;
+}
+main section.second section.cards div.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  flex: 1 1 300px;
+}
+main section.second section.cards div.card h4 {
+  font-size: 2rem;
+  margin: 1rem 0rem;
+}
+main section.second section.cards div.card p {
+  font-size: 1.25rem;
+}
+main section.second section.cards div.card a {
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  background-color: #09777d;
+  color: #FFF;
+  font-size: 1.25rem;
+  margin: 1rem 0rem;
+}
+main section.second section.cards div.card div.img-container {
+  overflow: hidden;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+}
+main section.second section.cards div.card div.img-container img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+main section.second section.cards div.card div.img-container img:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 700px) {
+  main section.second section.cards div.card img {
+    width: 40vw;
+    height: 40vw;
+  }
+  footer div.logo img {
+    width: 15vw;
+    height: 15vw;
+  }
+  footer section.links {
+    margin-top: 1rem;
+  }
+  footer section.links a img {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 40vh;
+  justify-content: space-around;
+  background-color: rgb(207, 207, 207);
+}
+footer div.logo {
+  display: flex;
+  align-items: center;
+}
+footer div.logo img {
+  width: 6vw;
+  height: 6vw;
+}
+footer nav {
+  width: 30%;
+}
+footer nav ul {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+footer nav ul li {
+  flex-basis: 100px;
+}
+footer nav ul li a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.35rem;
+  margin: 0rem 1rem;
+}
+footer section.links a img {
+  width: 5vw;
+  height: 5vw;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6daeeb;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #124d7e;
+}
+
+main.main_1 {
+  background-image: url(images/pexels-photo-416676.jpeg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+main.main_1 section.sur {
+  background: linear-gradient(rgba(111, 0, 255, 0.2), rgba(4, 171, 248, 0.3));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 2;
+}
+main.main_1 section.sur .surfs {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  width: 25vw;
+}
+main.main_1 section.sur .surfs .surf {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 10vw;
+  height: 10vw;
+}
+main.main_1 section.sur .surfs .surf img {
+  overflow: hidden;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  margin-right: 20px;
+  transition: all 0.3s;
+}
+main.main_1 section.sur .surfs .surf img:hover {
+  transform: scale(1.2);
+}
+main.main_1 section.sur .surfs form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main.main_1 section.sur .surfs form p {
+  color: #f1c811;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
+}
+main.main_1 section.sur .surfs form .inpt {
+  font-size: 1rem;
+}
+main.main_1 section.sur .surfs form .inpt .inpt_1 {
+  border-radius: 5px;
+}
+main.main_1 section.sur .surfs form .but {
+  width: 75px;
+  height: 25px;
+  border-radius: 10px;
+}
+main.main_1 section.sur_2 {
+  flex-grow: 1;
+}
+main.main_1 section.sur_2 div {
+  background-image: url(images/4.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 40vw;
+}
+main.main_1 section.sur_2 div p {
+  font-size: xx-large;
+  text-align: center;
+  color: white;
+  background-color: #087724;
+}
+
+main.main_2 {
+  background-image: url(/images/pexels-photo-416676.jpeg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+main.main_2 .box {
+  margin: 5rem;
+  width: 25vw;
+  height: 25vw;
+  border: 2px solid red;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(125, 125, 125, 0.4), rgba(255, 255, 255, 0.7));
+}
+main.main_2 .box p {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 15px;
+  color: red;
+  font-weight: bold;
+}
+main.main_2 .box div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+main.main_2 .box div .inpt {
+  height: 30px;
+  width: 250px;
+  border-radius: 5px;
+}
+main.main_2 .box .ture {
+  margin-left: 115px;
+}
+main.main_2 .box .btn {
+  height: 30px;
+  width: 250px;
+  border-radius: 5px;
+  background-color: #6fbdf1;
+}
+main.main_2 .box .ah {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+main.main_2 .box .ah a {
+  margin: 0 20px;
+}
+
+main.main_3 {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(68, 57, 235, 0.1), rgba(3, 21, 124, 0.7));
+}
+main.main_3 section.Us {
+  margin: 1rem 0;
+}
+main.main_3 section.Us div.Usimg {
+  width: 25vw;
+  height: 23vw;
+  background-image: url(/images/YuQi-1163.jpg);
+  background-position: center;
+  background-size: cover;
+}
+main.main_3 section.Us_2 {
+  margin: 1rem 0;
+  background: linear-gradient(to bottom, rgba(25, 25, 25, 0.1), rgba(222, 222, 222, 0.7));
+}
+main.main_3 section.Us_2 .Uss {
+  width: 25vw;
+  height: 23vw;
+  box-sizing: border-box;
+}
+main.main_3 section.Us_2 .Uss h2 {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+  color: #124d7e;
+}
+main.main_3 section.Us_2 .Uss p {
+  font-size: 1.5rem;
+  margin: 1rem;
+  color: #000;
+}/*# sourceMappingURL=20231025.css.map */
